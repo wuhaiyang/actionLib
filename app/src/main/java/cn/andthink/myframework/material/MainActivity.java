@@ -1,5 +1,6 @@
 package cn.andthink.myframework.material;
 
+import android.hardware.input.InputManager;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     private NavigationView navigation;
 
+    private InputManager inputManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
