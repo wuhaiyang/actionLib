@@ -60,7 +60,7 @@ public class SimpleAdapter extends RecyclerView.Adapter<MyViewHolder> {
     }
 }
 
-class MyViewHolder extends RecyclerView.ViewHolder {
+  class MyViewHolder extends RecyclerView.ViewHolder {
 
     TextView textView;
 

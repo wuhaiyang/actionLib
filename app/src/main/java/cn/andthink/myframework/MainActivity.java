@@ -11,6 +11,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +49,20 @@ public class MainActivity extends ActionBarActivity {
 
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
+
+        try {
+            InputStream open = getAssets().open("ShareSDK.xml");
+
+            BufferedReader bis = new BufferedReader(new InputStreamReader(open));
+
+            String line = null;
+            String resutl = null;
+            while ((line = bis.readLine()) != null) {
+                resutl += line;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void initView() {

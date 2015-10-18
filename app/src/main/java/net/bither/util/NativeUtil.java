@@ -54,7 +54,6 @@ public class NativeUtil {
 
 	private static void saveBitmap(Bitmap bit, int quality, String fileName,
 			boolean optimize) {
-
 		compressBitmap(bit, bit.getWidth(), bit.getHeight(), quality,
 				fileName.getBytes(), optimize);
 
